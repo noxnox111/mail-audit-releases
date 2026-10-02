@@ -4,30 +4,51 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <meta name="description" content="Скачать Mail Audit для macOS — Intel и Apple Silicon.">
+  <meta name="description" content="Скачать Mail Audit для macOS и Windows.">
   <title>Mail Audit</title>
+  <link rel="icon" type="image/png" sizes="128x128" href="mail-audit-icon-128.png">
+  <link rel="icon" type="image/svg+xml" sizes="any" href="mail-audit-icon.svg">
   <style>
     :root { color-scheme: dark; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #171816; color: #eceee9; }
     * { box-sizing: border-box; }
     body { min-height: 100vh; min-height: 100svh; margin: 0; display: grid; place-items: center; padding: 32px 24px; }
-    main { width: min(100%, 460px); text-align: center; }
-    h1 { margin: 0 0 32px; font-size: clamp(40px, 8vw, 64px); line-height: 1.1; letter-spacing: -.045em; font-weight: 600; overflow-wrap: anywhere; }
+    main { width: min(100%, 600px); text-align: center; }
+    .brand { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 32px; }
+    .brand-logo { width: 64px; height: 64px; flex: 0 0 64px; }
+    h1 { margin: 0; font-size: clamp(40px, 8vw, 64px); line-height: 1.1; letter-spacing: -.045em; font-weight: 600; overflow-wrap: anywhere; }
     a { color: inherit; }
+    .downloads { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
     .download { min-height: 56px; display: flex; align-items: center; justify-content: center; gap: 11px; padding: 14px 20px; border: 1px solid #4a4e46; border-radius: 6px; background: #1d1f1c; font-size: 16px; font-weight: 500; text-decoration: none; }
     .download:hover { background: #292b27; border-color: #9a9f96; }
     .download svg { width: 20px; height: 20px; flex: 0 0 20px; }
     .details { margin: 14px 0 0; color: #b2b7ad; font-size: 14px; line-height: 1.6; }
     a:focus-visible { outline: 2px solid #79a5ff; outline-offset: 4px; }
+    @media (max-width: 640px) { .downloads { grid-template-columns: 1fr; gap: 24px; } }
+    @media (max-width: 400px) { .brand { gap: 12px; }.brand-logo { width: 48px; height: 48px; flex-basis: 48px; } }
   </style>
 </head>
 <body>
   <main>
-    <h1>Mail Audit</h1>
-    <a class="download" href="https://github.com/noxnox111/mail-audit-releases/releases/download/macos-test-20261002/Mail-Audit-macOS-universal.dmg">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5"/></svg>
-      Скачать для macOS
-    </a>
-    <p class="details">Intel и Apple Silicon · DMG · 206 МБ</p>
+    <div class="brand">
+      <img class="brand-logo" src="mail-audit-icon.svg" width="64" height="64" alt="" aria-hidden="true">
+      <h1>Mail Audit</h1>
+    </div>
+    <div class="downloads">
+      <div>
+        <a class="download" aria-label="Скачать Mail Audit для macOS" aria-describedby="mac-architecture" href="https://github.com/noxnox111/mail-audit-releases/releases/download/desktop-test-1.1.1/Mail-Audit-macOS-universal.dmg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5"/></svg>
+          Скачать для macOS
+        </a>
+        <p class="details" id="mac-architecture">Intel и Apple Silicon</p>
+      </div>
+      <div>
+        <a class="download" aria-label="Скачать Mail Audit для Windows" aria-describedby="windows-architecture" href="https://github.com/noxnox111/mail-audit-releases/releases/download/desktop-test-1.1.1/Mail-Audit-Windows-x64.exe">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5"/></svg>
+          Скачать для Windows
+        </a>
+        <p class="details" id="windows-architecture">64-бит (x64)</p>
+      </div>
+    </div>
   </main>
 </body>
 </html>
